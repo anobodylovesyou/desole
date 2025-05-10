@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>I'm Sorry 💐</title>
+  <head>
+    <meta charset="UTF-8">
+    <title>I'm Sorry ❤️</title>
+    <!-- Lock layout width so it doesn’t scale down on iPhones -->
+    <meta name="viewport" content="width=1024">
+  
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+    <!-- Your custom styles follow... -->
+  </head>
+  
+  
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #fff0f5;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Glowing box effect */
+    .card {
+      max-width: 600px;
+      margin: 100px auto;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 25px rgba(255, 105, 180, 0.5);
+      background-color: #fff;
+      text-align: center;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      box-shadow: 0 0 35px rgba(255, 105, 180, 0.8);
+    }
+
+    /* Flower instead of heart */
+    .flower {
+      font-size: 2.5rem;
+      color: #ff6b81;
+      text-shadow: 0 0 10px #ff6b81;
+    }
+
+    .apology-header {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #ff1493;
+      text-shadow: 0 0 10px #ff69b4;
+      margin-bottom: 15px;
+    }
+
+    .apology-paragraph {
+      font-size: 1.2rem;
+      color: #333;
+      margin-top: 15px;
+    }
+
+    /* Mobile responsiveness */
+    @media (max-width: 576px) {
+      .card {
+        padding: 20px;
+      }
+
+      .apology-header {
+        font-size: 2rem;
+      }
+
+      .apology-paragraph {
+        font-size: 1rem;
+      }
+
+      .flower {
+        font-size: 2rem;
+      }
+    }
+
+    /* Floating flower petals animation */
+    .petal {
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      /* background-image: url('https://cdn-icons-png.flaticon.com/512/3372/3372026.png'); */
+      background-size: contain;
+      animation: fall 10s linear infinite;
+      opacity: 0;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(-200px) rotate(0deg);
+        opacity: 0.9;
+      }
+      100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating flower petals -->
+  <script>
+    for (let i = 0; i < 15; i++) {
+      let petal = document.createElement("div");
+      petal.className = "petal";
+      petal.innerText = "❤️"; // Heart emoji
+      petal.style.left = Math.random() * 100 + "vw";
+      petal.style.animationDuration = (Math.random() * 5 + 5) + "s";
+      petal.style.animationDelay = (Math.random() * 5) + "s";
+      document.body.appendChild(petal);
+    }
+  </script>
+
+  <div class="card">
+    <div class="flower mb-3">💐💖💐</div>
+    <div class="apology-header">I'm Sorry❤️</div>
+    <p class="apology-paragraph">
+      I know I hurt you, and I hate that I did. Please know it wasn’t my intention and I deeply regret it. You mean so much to me, and I’m truly sorry for the pain I caused. I’m hoping you can find it in your heart to forgive me.
+    </p>
+    <div class="flower mt-3">💖💐💖</div>
+  </div>
+
+</body>
+</html>
